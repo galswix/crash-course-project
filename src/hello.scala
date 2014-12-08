@@ -1,6 +1,8 @@
 /**
  * Created by gals on 12/8/14.
  */
-class  hello {
+class hello {
 
+
+  val x = 4
 }
