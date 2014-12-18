@@ -11,14 +11,14 @@ Declare a bean in your spring config which returns your interface and use the th
 
 ```scala
 
-	@Bean def htmlRendererBILog: HtmlRendererBILog = {
-    	return BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog])
+@Bean def htmlRendererBILog: HtmlRendererBILog = {
+    return BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog])
   }
+```
 ```java
-	@Bean
-    public EditorLog editorLog() {
-        return BILoggerFactory.aBILoggerFor(EditorLog.class);
-    }
-
+@Bean
+public EditorLog editorLog() {
+    return BILoggerFactory.aBILoggerFor(EditorLog.class);
+}
 
 ```
