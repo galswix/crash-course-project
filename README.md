@@ -15,9 +15,7 @@ a **BILoggerFactory** which you can use to get interface based BILoggers and cas
 
 ```scala
 
-@Bean def htmlRendererBILog: HtmlRendererBILog = {
-    return BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog]) //HtmlRendererBILog is a class that has @BiEvent(s)
-  }
+@Bean def htmlRendererBILog: HtmlRendererBILog = BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog]) //HtmlRendererBILog is a class that has @BiEvent(s)
 ```
 ```java
 @Bean
