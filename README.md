@@ -3,22 +3,26 @@
 
 ## Overview
 
-a **BILoggerFactory** which you can use to get interface based BiLoggers and case class based BiLoggers.
+a **BILoggerFactory** which you can use to get interface based BILoggers and case class based BILoggers.
 
 ### Migration from CFLogger
 
-Declare a bean in your spring config which returns your interface and use the the BILoggerFactory to retrieve the interface.
+1. Remove @CFLogger from your logging class (where you declare your @BiEvent)
+
+2. Declare a bean in your spring config which returns your interface and use the the BILoggerFactory to retrieve the interface.
+
+3. Retrieve your logger with @Resource
 
 ```scala
 
 @Bean def htmlRendererBILog: HtmlRendererBILog = {
-    return BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog])
+    return BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog]) //HtmlRendererBILog is a class that has @BiEvent(s)
   }
 ```
 ```java
 @Bean
-public EditorLog editorLog() {
-    return BILoggerFactory.aBILoggerFor(EditorLog.class);
+public HtmlRendererBILog htmlRendererBILog() {
+    return BILoggerFactory.aBILoggerFor(HtmlRendererBILog.class);
 }
 
 ```
