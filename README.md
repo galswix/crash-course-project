@@ -3,7 +3,7 @@
 
 ## Overview
 
-a **BILoggerFactory** which you can use to get interface based bi-loggers and case class based bi-loggers.
+a **BILoggerFactory** which you can use to get interface based BiLoggers and case class based BiLoggers.
 
 ### Migration from CFLogger
 
