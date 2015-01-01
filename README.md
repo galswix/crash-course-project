@@ -66,6 +66,5 @@ val biLog = BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog])
 * Log BiEvents
 
 ```scala
-biLog.renderingHtmlSite(concreteHtmlRenderer.getBiName(), request.getBaseUri(), request.getApplicationId(),
-                getDomainNameIfExists(builder.getCurrentDomain()), request.getMetaSite().getDocumentType(), request.getPath(), result);
+biLog.renderingHtmlSite("name", "/baseUri", "appId","domain", "docType", "path", result);
 ```
