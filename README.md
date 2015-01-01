@@ -61,5 +61,11 @@ public interface HtmlRendererBILog {
 * Retrieve a logger
 
 ```scala
-val logger = BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog])
+val biLog = BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog])
+```
+* Log BiEvents
+
+```scala
+biLog.renderingHtmlSite(concreteHtmlRenderer.getBiName(), request.getBaseUri(), request.getApplicationId(),
+                getDomainNameIfExists(builder.getCurrentDomain()), request.getMetaSite().getDocumentType(), request.getPath(), result);
 ```
