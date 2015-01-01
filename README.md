@@ -88,3 +88,7 @@ case class MyEvent(user: String) extends BIEvent(32)
 ```scala
 logger.log(MyEvent("gals"))
 ```
+
+##One more thing...
+
+As always, start with checking out the [tests](https://github.com/wix/wix-framework/blob/master/wix-bi-reporting/src/test/scala/com/wixpress/framework/bi/BIContractTest.scala)
