@@ -27,3 +27,8 @@ public HtmlRendererBILog htmlRendererBILog() {
 
 * Retrieve your logger with @Resource
 
+### General usage
+
+Please check [a relative link](BIContractTest.scala) for usages example
+
+
