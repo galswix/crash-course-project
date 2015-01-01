@@ -1,8 +1,3 @@
-# BILoggerFactory
-
-
-## Overview
-
 a **BILoggerFactory** which you can use to get interface based BILoggers and case class based BILoggers.
 
 ### Migration from CFLogger
@@ -24,6 +19,5 @@ public HtmlRendererBILog htmlRendererBILog() {
 }
 
 ```
-
 3. Retrieve your logger with @Resource
 
