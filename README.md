@@ -30,7 +30,7 @@ public HtmlRendererBILog htmlRendererBILog() {
 
 ##Usage
 
-### Interface Based BILogger
+### Interface based BILogger
 
 * Create a logging interface and declare your @BiEvent(s)
 ```java
@@ -63,8 +63,28 @@ public interface HtmlRendererBILog {
 ```scala
 val biLog = BILoggerFactory.aBILoggerFor(classOf[HtmlRendererBILog])
 ```
+(Or through @Bean and @Resource or )
+
 * Log BiEvents
 
 ```scala
 biLog.renderingHtmlSite("name", "/baseUri", "appId","domain", "docType", "path", result);
+```
+
+### Case class based BILogger
+
+* Create a logger
+```scala
+val exampleSource = 28
+val logger = BILoggerFactory.aBILogger(eventSource = exampleSource, markerName = "name")
+```
+
+* Create case class based BiEvent
+```scala
+case class MyEvent(user: String) extends BIEvent(32)
+```
+
+* Log BiEvent
+```scala
+logger.log(MyEvent("gals"))
 ```
