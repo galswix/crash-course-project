@@ -29,6 +29,6 @@ public HtmlRendererBILog htmlRendererBILog() {
 
 ### General usage
 
-Please check [a relative link](BIContractTest.scala) for usages example
+Please check the [tests](https://github.com/wix/wix-framework/blob/master/wix-bi-reporting/src/test/scala/com/wixpress/framework/bi/BIContractTest.scala) for usages example
 
 
